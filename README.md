@@ -182,6 +182,11 @@ docker run -d --name <NOMBRE_CONTENEDOR> -e POSTGRES_USER=<DB_USER> -e POSTGRES_
 - Contenedor PostgreSQL definido para entorno local.
 - Contenedor activo verificado en `localhost:<DB_PORT>`.
 
+Evidencias del paso 1:
+
+![01 DBeaver configuracion](docs/evidencias/imagenes/01-dbeaver-configuracion-conexion.png)
+![02 Docker postgres activo](docs/evidencias/imagenes/02-docker-contenedor-postgres-activo.png)
+
 ## Informe didactico: Paso 2 (Descarga del script Northwind)
 
 En este paso se descargo el repositorio de apoyo para obtener el script SQL compatible con PostgreSQL.
@@ -215,6 +220,10 @@ En este paso se importo manualmente el script `db/scripts/northwind.postgres.sql
 
 - El script se ejecuto correctamente en DBeaver.
 - Los datos de Northwind se visualizaron correctamente en el cliente.
+
+Evidencia del paso 3:
+
+![03 DBeaver conexion exitosa](docs/evidencias/imagenes/03-dbeaver-conexion-exitosa.png)
 
 ## Informe didactico: Paso 4 (Rest Client para comprobacion por API)
 
@@ -401,20 +410,9 @@ Imagen del paso (ordenada):
 
 ![MetaMask - Add custom network](docs/evidencias/imagenes/04-metamask-add-custom-network.png)
 
-### Evidencias visuales del paso a paso
+Evidencia de saldos en MetaMask:
 
-Se insertan todas las evidencias finales (01 a 10):
-
-![01 DBeaver configuracion](docs/evidencias/imagenes/01-dbeaver-configuracion-conexion.png)
-![02 Docker postgres activo](docs/evidencias/imagenes/02-docker-contenedor-postgres-activo.png)
-![03 DBeaver conexion exitosa](docs/evidencias/imagenes/03-dbeaver-conexion-exitosa.png)
-![04 MetaMask red custom](docs/evidencias/imagenes/04-metamask-add-custom-network.png)
 ![05 MetaMask saldos](docs/evidencias/imagenes/05-metamask-saldos-confirmados.png)
-![06 Esquema frontend](docs/evidencias/imagenes/06-esquema-frontend.png)
-![07 Home catalogo](docs/evidencias/imagenes/07-home-catalogo-productos.png)
-![08 Cesta resumen](docs/evidencias/imagenes/08-cesta-resumen-pago.png)
-![09 Transaccion pendiente](docs/evidencias/imagenes/09-metamask-transaccion-pendiente.png)
-![10 Transaccion confirmada](docs/evidencias/imagenes/10-metamask-transaccion-confirmada.png)
 
 ## Informe didactico: Paso 6 (Esquema de frontend)
 
@@ -661,6 +659,10 @@ Y se transforma la respuesta para mostrar:
 - La lista Home ya usa datos reales de Northwind.
 - Se deja preparada la base para eliminar el mock progresivamente.
 
+Evidencia del Home:
+
+![07 Home catalogo](docs/evidencias/imagenes/07-home-catalogo-productos.png)
+
 ## Informe didactico: Paso 10 (Estado global de cesta + formulario de cantidades)
 
 En este paso se implementa el estado global de compras para guardar cada clic del usuario y su cantidad, usando `useContext` y formulario con `react-hook-form`.
@@ -729,6 +731,10 @@ En `src/pages/CartPage.jsx`:
 - Cada envio del formulario agrega o actualiza el producto en la cesta.
 - La cesta refleja las cantidades ingresadas por el usuario.
 - El total general se recalcula automaticamente.
+
+Evidencia de la cesta:
+
+![08 Cesta resumen](docs/evidencias/imagenes/08-cesta-resumen-pago.png)
 
 ## Informe didactico: Paso 11 (Conexion MetaMask + pago)
 
@@ -812,6 +818,11 @@ Checklist recomendado:
 4. Conectar MetaMask.
 5. Cambiar cuenta en MetaMask y confirmar que la app la actualiza.
 6. Pulsar `Pagar` y confirmar transaccion o rechazo controlado.
+
+Evidencias del flujo de pago:
+
+![09 Transaccion pendiente](docs/evidencias/imagenes/09-metamask-transaccion-pendiente.png)
+![10 Transaccion confirmada](docs/evidencias/imagenes/10-metamask-transaccion-confirmada.png)
 
 ## Proximo paso recomendado
 
