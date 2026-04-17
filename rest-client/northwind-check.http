@@ -1,0 +1,90 @@
+### Variables base (ajustar segun tu API local)
+@baseUrl = http://localhost:3000
+@apiPrefix = /api
+@rawProductsUrl = http://localhost:3000/products
+@productId = 1
+@productIdNoExiste = 9999
+@searchText = chai
+@maxPrice = 25
+@limit = 10
+@offset = 0
+
+### 1) Healthcheck general de la API
+GET {{baseUrl}}/health
+Accept: application/json
+
+###
+
+### 2) Ping didactico del servidor Node.js
+GET {{baseUrl}}/ping
+Accept: application/json
+
+###
+
+### 3) Listar productos (comprobacion principal)
+GET {{baseUrl}}/products
+Accept: application/json
+
+###
+
+### 4) Listar productos con endpoint API
+GET {{baseUrl}}{{apiPrefix}}/products
+Accept: application/json
+
+###
+
+### 5) Obtener producto por id
+GET {{baseUrl}}{{apiPrefix}}/products/{{productId}}
+Accept: application/json
+
+###
+
+### 6) Obtener producto por id inexistente (debe responder 404)
+GET {{baseUrl}}{{apiPrefix}}/products/{{productIdNoExiste}}
+Accept: application/json
+
+###
+
+### 7) Ver toda la tabla products (raw, para navegador)
+GET {{rawProductsUrl}}
+Accept: application/json
+
+###
+
+### 8) PRACTICA - Filtro por nombre (requiere backend con query params)
+### Ejemplo esperado en backend:
+### GET /api/products?search=chai
+GET {{baseUrl}}{{apiPrefix}}/products?search={{searchText}}
+Accept: application/json
+
+###
+
+### 9) PRACTICA - Filtro por precio maximo (requiere backend)
+### Ejemplo esperado en backend:
+### GET /api/products?maxPrice=25
+GET {{baseUrl}}{{apiPrefix}}/products?maxPrice={{maxPrice}}
+Accept: application/json
+
+###
+
+### 10) PRACTICA - Paginacion (requiere backend)
+### Ejemplo esperado en backend:
+### GET /api/products?limit=10&offset=0
+GET {{baseUrl}}{{apiPrefix}}/products?limit={{limit}}&offset={{offset}}
+Accept: application/json
+
+###
+
+### 11) PRACTICA - Orden por nombre asc (requiere backend)
+### Ejemplo esperado en backend:
+### GET /api/products?sortBy=product_name&order=asc
+GET {{baseUrl}}{{apiPrefix}}/products?sortBy=product_name&order=asc
+Accept: application/json
+
+###
+
+### 12) PRACTICA - Solo productos activos (requiere backend)
+### Ejemplo esperado en backend:
+### GET /api/products?discontinued=0
+GET {{baseUrl}}{{apiPrefix}}/products?discontinued=0
+Accept: application/json
