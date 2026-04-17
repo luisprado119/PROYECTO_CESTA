@@ -403,17 +403,18 @@ Imagen del paso (ordenada):
 
 ### Evidencias visuales del paso a paso
 
-Puedes insertar imágenes directamente en Markdown (ruta relativa al repositorio):
+Se insertan todas las evidencias finales (01 a 10):
 
-```md
-![Docker contenedor activo](docs/evidencias/imagenes/02-docker-contenedor-postgres-activo.png)
-![DBeaver conexion exitosa](docs/evidencias/imagenes/03-dbeaver-conexion-exitosa.png)
-```
-
-Si agregas nuevas capturas de esta fase, usa por ejemplo:
-
-- `docs/evidencias/imagenes/05-metamask-saldos-confirmados.png`
-- `docs/evidencias/imagenes/06-esquema-frontend.png`
+![01 DBeaver configuracion](docs/evidencias/imagenes/01-dbeaver-configuracion-conexion.png)
+![02 Docker postgres activo](docs/evidencias/imagenes/02-docker-contenedor-postgres-activo.png)
+![03 DBeaver conexion exitosa](docs/evidencias/imagenes/03-dbeaver-conexion-exitosa.png)
+![04 MetaMask red custom](docs/evidencias/imagenes/04-metamask-add-custom-network.png)
+![05 MetaMask saldos](docs/evidencias/imagenes/05-metamask-saldos-confirmados.png)
+![06 Esquema frontend](docs/evidencias/imagenes/06-esquema-frontend.png)
+![07 Home catalogo](docs/evidencias/imagenes/07-home-catalogo-productos.png)
+![08 Cesta resumen](docs/evidencias/imagenes/08-cesta-resumen-pago.png)
+![09 Transaccion pendiente](docs/evidencias/imagenes/09-metamask-transaccion-pendiente.png)
+![10 Transaccion confirmada](docs/evidencias/imagenes/10-metamask-transaccion-confirmada.png)
 
 ## Informe didactico: Paso 6 (Esquema de frontend)
 
@@ -509,13 +510,11 @@ La cabecera usa enlaces permanentes:
 - `src/pages/ProductPage.jsx`
 - `src/pages/CartPage.jsx`
 
-### 7) Evidencias sugeridas para router
+### 7) Evidencia de esta fase
 
-Si agregas las capturas del profesor al repositorio, puedes usar esta nomenclatura:
+La parte tecnica de Router y Layout se documenta en:
 
-- `docs/evidencias/imagenes/07-router-config-routes.png`
-- `docs/evidencias/imagenes/08-router-layout-outlet-links.png`
-- `docs/evidencias/imagenes/09-router-navegacion-rutas.png`
+- `docs/evidencias/CODIGOS_EXPLICADOS.md`
 
 ## Informe didactico: Paso 8 (Backend Node.js + PostgreSQL)
 
@@ -597,15 +596,11 @@ Y desde REST Client:
 
 - `rest-client/northwind-check.http`
 
-### 7) Evidencias sugeridas para este paso
+### 7) Evidencia de esta fase
 
-Si agregas las capturas del profesor al repositorio, puedes usar:
+La explicacion de comandos y codigo backend se documenta en:
 
-- `docs/evidencias/imagenes/10-backend-nodejs-comandos.png`
-- `docs/evidencias/imagenes/11-backend-server-ping-codigo-terminal.png`
-- `docs/evidencias/imagenes/12-backend-ping-navegador-curl.png`
-- `docs/evidencias/imagenes/13-backend-db-modulo-postgres.png`
-- `docs/evidencias/imagenes/14-backend-products-endpoint-try-catch.png`
+- `docs/evidencias/CODIGOS_EXPLICADOS.md`
 
 ## Informe didactico: Paso 9 (React Query + listado real en Home)
 
